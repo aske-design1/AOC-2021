@@ -59,7 +59,7 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  Day01
+    exposed-modules:  Day01, Day02
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -121,7 +121,7 @@ test-suite AOC2021-test
 
     -- The entrypoint to the test suite.
     main-is:          Main.hs
-    other-modules: Day01Test 
+    other-modules: Day01Test, Day02Test
 
     -- Test dependencies.
     build-depends:

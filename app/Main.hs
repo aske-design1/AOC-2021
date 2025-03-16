@@ -1,6 +1,7 @@
 module Main (main) where
 
 import qualified Day01 (part1, part2)
+import qualified Day02 (part1, part2)
 import System.Directory (getCurrentDirectory)
 
 
@@ -24,4 +25,5 @@ dayParser day = do
 
   case day of
     1 -> return $ Just (Day01.part1 input, Day01.part2 input)
+    2 -> return $ Just (Day02.part1 input, Day02.part2 input)
     _ -> return Nothing

@@ -13,7 +13,6 @@ part1 = fst . foldl readIncrease (0, Nothing) . splitOn "\n"
             (Just val, Nothing) -> (acc, Just val)
             (Nothing, _) -> (acc, prev)
 
-
 part2 :: String -> Int
 part2 = fst . foldl slidingWindow (0, []) . splitOn "\n"
     where 
@@ -22,7 +21,7 @@ part2 = fst . foldl slidingWindow (0, []) . splitOn "\n"
                 let newWindow = updateWindow window val
                     cmp = compareWin newWindow 
                 in (acc + fromEnum cmp, newWindow)
-            Nothing-> (acc, window)
+            Nothing -> (acc, window)
 
         updateWindow window val = case window of 
             [] -> [val]
@@ -32,10 +31,8 @@ part2 = fst . foldl slidingWindow (0, []) . splitOn "\n"
             [_, y, z, a] -> [y, z+val, a+val, val]
             _ -> []
 
-        compareWin :: [Int] -> Bool
         compareWin (x:y:_) = x < y
         compareWin _ = False
-
 
 parseInt :: String -> Maybe Int
 parseInt str = readMaybe str :: Maybe Int 

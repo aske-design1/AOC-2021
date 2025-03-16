@@ -92,7 +92,7 @@ executable AOC2021
     -- Other library packages from which modules are imported.
     build-depends:
         base ^>=4.17.2.1,
-        AOC2021
+        AOC2021, directory
 
     -- Directories containing source files.
     hs-source-dirs:   app

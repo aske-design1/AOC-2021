@@ -16,7 +16,8 @@ testPart1 = TestCase (assertEqual "Part 1" 7
 
 -- Part 2
 testPart2 :: Test
-testPart2 = TestCase (assertEqual "for Part 2," 0 (Day01.part2 ""))
+testPart2 = TestCase (assertEqual "for Part 2" 5 (
+  Day01.part2 "199\n200\n208\n210\n200\n207\n240\n269\n260\n263"))
 
 -- Group test cases
 tests :: Test

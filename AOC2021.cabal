@@ -59,7 +59,7 @@ library
     import:           warnings
 
     -- Modules exported by the library.
-    exposed-modules:  MyLib
+    exposed-modules:  Day01
 
     -- Modules included in this library but not exported.
     -- other-modules:
@@ -68,7 +68,7 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1, split, containers, HUnit
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -121,8 +121,8 @@ test-suite AOC2021-test
 
     -- The entrypoint to the test suite.
     main-is:          Main.hs
+    other-modules: Day01Test 
 
     -- Test dependencies.
     build-depends:
-        base ^>=4.17.2.1,
-        AOC2021
+        base ^>=4.17.2.1, AOC2021, HUnit >= 1.6.2.0
